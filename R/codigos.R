@@ -126,8 +126,6 @@ ultimoSinal <- function(df, defasagem = 1){
       if(df$sinal[i-defasagem] != 3){
         df$last_pico[i] = df$last_pico[i-1] + 1
       }
-    }else{
-      df$last_pico[i-defasagem] = df$last_pico[i-1-defasagem] + 1
     }
   }
 
@@ -142,8 +140,6 @@ ultimoSinal <- function(df, defasagem = 1){
       if(df$sinal[i-defasagem] != 2){
         df$last_nivel[i] = df$last_nivel[i-1] + 1
       }
-    }else{
-      df$last_nivel[i-defasagem] = df$last_nivel[i-1-defasagem] + 1
     }
   }
 
