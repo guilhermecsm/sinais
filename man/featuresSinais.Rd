@@ -6,16 +6,25 @@
 \usage{
 featuresSinais(df, defasagem = 1, janela = 6)
 }
+
+\arguments{
+\item{df}{Dataframe}
+
+\item{defasagem}{Numeric. Por default utiliza o lag 1 da coluna de sinais.}
+
+\item{janela}{Numeric. Tamanho da janela rolante. Por default 6.}
+}
+\value{
+Retorna dataframe.
+}
+
+
 \description{
 Cria todas as features de sinais para o modelo de classificacao.
 }
-\details{
-@param df dataframe
- @param defasagem Numeric. Por default utiliza o lag 1 da coluna de sinais.
- @param janela Numeric. Tamanho da janela rolante. Por default 6.
- @return dataframe
- @export
- @examples
+
+
+\examples{
 set.seed(412)
 df = tibble(serie = rnorm(100, 10, 1))
 df$sinal <- timeSeries::classificadorPico(df$serie, lag = 6, threshold = 2, influence = 0.1)$signals
