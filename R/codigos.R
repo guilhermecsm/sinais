@@ -55,67 +55,67 @@ classificadorPico <- function(y,lag,threshold,influence) {
 
 ultimoSinal <- function(df, defasagem = 1){
 
-  if(df$sinal[defasagem] == 3){
-
-    df$last_pico <- NA
-
-    for(j in 1:(defasagem-1)){
-      df$last_pico[j] = 1
-    }
-
-    df$last_nivel <- NA
-
-    for(j in 1:defasagem){
-      df$last_nivel[j] = j
-    }
-
-    df$last_vale <- NA
-
-    for(j in 1:defasagem){
-      df$last_vale[j] = j
-    }
-
-  }else if(df$sinal[defasagem] == 2){
-
-    df$last_pico <- NA
-
-    for(j in 1:defasagem){
-      df$last_pico[j] = j
-    }
-
-    df$last_nivel <- NA
-
-    for(j in 1:defasagem){
-      df$last_nivel[j] = 1
-    }
-
-    df$last_vale <- NA
-
-    for(j in 1:defasagem){
-      df$last_vale[j] = j
-    }
-
-  }else{
-
-    df$last_pico <- NA
-
-    for(j in 1:defasagem){
-      df$last_pico[j] = j
-    }
-
-    df$last_nivel <- NA
-
-    for(j in 1:defasagem){
-      df$last_nivel[j] = j
-    }
-
-    df$last_vale <- NA
-
-    for(j in 1:(defasagem-1)){
-      df$last_vale[j] = 1
-    }
-
-  }
+  # if(df$sinal[defasagem] == 3){
+  #
+  #   df$last_pico <- NA
+  #
+  #   for(j in 1:(defasagem)){
+  #     df$last_pico[j] = 1
+  #   }
+  #
+  #   df$last_nivel <- NA
+  #
+  #   for(j in 1:defasagem){
+  #     df$last_nivel[j] = j
+  #   }
+  #
+  #   df$last_vale <- NA
+  #
+  #   for(j in 1:defasagem){
+  #     df$last_vale[j] = j
+  #   }
+  #
+  # }else if(df$sinal[defasagem] == 2){
+  #
+  #   df$last_pico <- NA
+  #
+  #   for(j in 1:defasagem){
+  #     df$last_pico[j] = j
+  #   }
+  #
+  #   df$last_nivel <- NA
+  #
+  #   for(j in 1:defasagem){
+  #     df$last_nivel[j] = 1
+  #   }
+  #
+  #   df$last_vale <- NA
+  #
+  #   for(j in 1:defasagem){
+  #     df$last_vale[j] = j
+  #   }
+  #
+  # }else{
+  #
+  #   df$last_pico <- NA
+  #
+  #   for(j in 1:defasagem){
+  #     df$last_pico[j] = j
+  #   }
+  #
+  #   df$last_nivel <- NA
+  #
+  #   for(j in 1:defasagem){
+  #     df$last_nivel[j] = j
+  #   }
+  #
+  #   df$last_vale <- NA
+  #
+  #   for(j in 1:(defasagem)){
+  #     df$last_vale[j] = 1
+  #   }
+  #
+  # }
 
 
   for(i in (1+defasagem):(nrow(df)+defasagem)){
