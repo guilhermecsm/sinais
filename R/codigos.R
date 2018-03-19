@@ -117,6 +117,9 @@ ultimoSinal <- function(df, defasagem = 1){
   #
   # }
 
+  df$last_vale <- NA
+  df$last_pico <- NA
+  df$last_nivel <- NA
 
   for(i in (1+defasagem):(nrow(df)+defasagem)){
     if(i <= nrow(df)){
