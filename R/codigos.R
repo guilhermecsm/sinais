@@ -157,8 +157,6 @@ ultimoSinal <- function(df, defasagem = 1){
       if(df$sinal[i-defasagem] != 1){
         df$last_vale[i] = df$last_vale[i-1] + 1
       }
-    }else{
-      df$last_vale[i-defasagem] = df$last_vale[i-1-defasagem] + 1
     }
   }
 
