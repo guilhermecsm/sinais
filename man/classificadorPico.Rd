@@ -25,7 +25,7 @@ Essa funcao classifica a serie temporal em pico, vale e nivel.
 set.seed(412)
 df = tibble(serie = rnorm(100, 10, 1))
 plot(df$serie, type = 'l')
-df$sinal <- timeSeries::classificadorPico(df$serie, lag = 6, threshold = 2, influence = 0.1)$signals
+df$sinal <- sinais::classificadorPico(df$serie, lag = 6, threshold = 2, influence = 0.1)$signals
 head(df)
 }
 \references{

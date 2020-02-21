@@ -27,6 +27,6 @@ Cria todas as features de sinais para o modelo de classificacao.
 \examples{
 set.seed(412)
 df = tibble(serie = rnorm(100, 10, 1))
-df$sinal <- timeSeries::classificadorPico(df$serie, lag = 6, threshold = 2, influence = 0.1)$signals
-timeSeries::featuresSinais(df, janela = 3) %>% View
+df$sinal <- sinais::classificadorPico(df$serie, lag = 6, threshold = 2, influence = 0.1)$signals
+sinais::featuresSinais(df, janela = 3) %>% View
 }

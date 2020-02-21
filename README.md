@@ -1,3 +1,12 @@
 # R Package
 
-Classificador de picos e vales no contexto de séries temporais.
+Este pacote é um classificador de picos e vales de uma série temporal.
+
+## Instalação
+devtools::install_github("guilhermecsm/sinais")
+
+## Importar a biblioteca
+library(sinais)
+
+## Documentação da biblioteca
+help(package = "sinais")
