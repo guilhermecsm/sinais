@@ -25,6 +25,7 @@ Cria todas as features de sinais para o modelo de classificacao.
 
 
 \examples{
+library(tidyverse)
 set.seed(412)
 df = tibble(serie = rnorm(100, 10, 1))
 df$sinal <- sinais::classificadorPico(df$serie, lag = 6, threshold = 2, influence = 0.1)$signals

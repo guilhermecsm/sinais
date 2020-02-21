@@ -22,6 +22,7 @@ list com os seguintes objetos: signals, avgFilter and stdFilter.
 Essa funcao classifica a serie temporal em pico, vale e nivel.
 }
 \examples{
+library(tidyverse)
 set.seed(412)
 df = tibble(serie = rnorm(100, 10, 1))
 plot(df$serie, type = 'l')
